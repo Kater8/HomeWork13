@@ -33,7 +33,6 @@ class CatalogViewController: UIViewController {
         contentView.delegate = self
         
         contentView.tableView.dataSource = self
-        contentView.tableView.delegate = self
     }
 }
 
@@ -50,6 +49,13 @@ extension CatalogViewController: CatalogViewDelegate {
     
 }
 
+// MARK: - CustomCellDelegate
+extension CatalogViewController: CustomCatalogCellDelegate {
+    func didTapFavourite(_ isFavourite: Bool, itemId: Int) {
+        model.updateItem(with: isFavourite, by: itemId)
+    }
+}
+
 // MARK: - UITableViewDataSource
 extension CatalogViewController: UITableViewDataSource {
     
@@ -59,31 +65,60 @@ extension CatalogViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CatalogCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CatalogCell") as? CustomCatalogCell
         else {
             assertionFailure()
             return UITableViewCell()
         }
-        
         let item = model.pcItems[indexPath.row]
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = item.model
-        
-        cell.accessoryType = (item.isFavorite ?? false) ? .checkmark : .none
-        
+        cell.setup(with: item)
+        cell.setFavourite(item.favorite())
+        cell.delegate = self
         return cell
     }
 }
 
-// MARK: - UITableViewDelegate
-extension CatalogViewController: UITableViewDelegate {
+// MARK: CustomCatalogCell
+class CustomCatalogCell: UITableViewCell {
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var favouriteButton: UIButton!
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let isFavorite = !model.pcItems[indexPath.row].favorite()
-        model.updateItem(with: isFavorite, at: indexPath.row)
-        
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.accessoryType = isFavorite ? .checkmark : .none
+    weak var delegate: CustomCatalogCellDelegate?
+    
+    private var itemId: Int = 0
+    private var isFavourite: Bool = false
+    
+    func setup(with item: Pc) {
+        self.itemId = item.id
+        self.idLabel.text = String(item.id)
+        self.priceLabel.text = "\(item.price) \(item.currency)"
+        self.nameLabel.text = item.name
+        self.detailLabel.text = "\(item.manufacturer) \(item.model)"
+      
     }
+    
+    func setFavourite(_ isFavourite: Bool) {
+        let image: UIImage? = isFavourite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        favouriteButton.setImage(image, for: .normal)
+        self.isFavourite = isFavourite
+    }
+    
+  
+    
+    @IBAction func favouriteAction(_ sender: UIButton) {
+        /// let newValue = !isFavourite
+        let newValue = !isFavourite
+        /// change isFavourite
+        setFavourite(newValue)
+        /// change icon (setFavourite)
+        delegate?.didTapFavourite(newValue, itemId: itemId)
+        /// call delegate
+    }
+}
+
+protocol CustomCatalogCellDelegate: AnyObject {
+    func didTapFavourite(_ isFavourite: Bool, itemId: Int)
 }

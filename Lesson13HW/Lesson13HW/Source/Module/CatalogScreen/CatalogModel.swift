@@ -30,6 +30,13 @@ class CatalogModel {
         }
     }
     
+    func updateItem(with isFavorite: Bool, by id: Int) {
+        if let index = pcItems.firstIndex(where: {$0.id == id}) {
+            updateItem(with: isFavorite, at: index)
+        }
+    }
+    
+        
     func updateItem(with isFavorite: Bool, at index: Int) {
         pcItems[index].isFavorite = isFavorite
     }
