@@ -1,0 +1,504 @@
+{
+   "data": [
+       {
+           "id": 1,
+           "name": "Gaming PC",
+           "manufacturer": "MSI",
+           "model": "GS66 Stealth",
+           "rating": 5,
+           "price": 85000,
+           "currency": "грн",
+           "topSelling": 1
+       },
+       {
+           "id": 2,
+           "name": "Workstation",
+           "manufacturer": "Dell",
+           "model": "Precision 7550",
+           "rating": 4,
+           "price": 72000,
+           "currency": "грн",
+           "topSelling": 1
+       },
+       {
+           "id": 3,
+           "name": "Ultrabook",
+           "manufacturer": "Apple",
+           "model": "MacBook Pro",
+           "rating": 5,
+           "price": 95000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 4,
+           "name": "Desktop PC",
+           "manufacturer": "HP",
+           "model": "Pavilion",
+           "rating": 3,
+           "price": 50000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 5,
+           "name": "Chromebook",
+           "manufacturer": "Google",
+           "model": "Pixelbook Go",
+           "rating": 4,
+           "price": 30000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 6,
+           "name": "Gaming Laptop",
+           "manufacturer": "ASUS",
+           "model": "ROG Zephyrus G14",
+           "rating": 5,
+           "price": 90000,
+           "currency": "грн",
+           "topSelling": 1
+       },
+       {
+           "id": 7,
+           "name": "Business Laptop",
+           "manufacturer": "Lenovo",
+           "model": "ThinkPad X1 Carbon",
+           "rating": 5,
+           "price": 80000,
+           "currency": "грн",
+           "topSelling": 1
+       },
+       {
+           "id": 8,
+           "name": "All-in-One PC",
+           "manufacturer": "Acer",
+           "model": "Aspire C24",
+           "rating": 4,
+           "price": 60000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 9,
+           "name": "Convertible Laptop",
+           "manufacturer": "Microsoft",
+           "model": "Surface Pro 7",
+           "rating": 4,
+           "price": 75000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 10,
+           "name": "Budget Laptop",
+           "manufacturer": "HP",
+           "model": "Chromebook 14",
+           "rating": 3,
+           "price": 35000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 11,
+           "name": "High-Performance Desktop",
+           "manufacturer": "Alienware",
+           "model": "Aurora R12",
+           "rating": 5,
+           "price": 98000,
+           "currency": "грн",
+           "topSelling": 1
+       },
+       {
+           "id": 12,
+           "name": "Mac Mini",
+           "manufacturer": "Apple",
+           "model": "Mac Mini",
+           "rating": 4,
+           "price": 55000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 13,
+           "name": "Student Laptop",
+           "manufacturer": "Acer",
+           "model": "Swift 3",
+           "rating": 4,
+           "price": 40000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 14,
+           "name": "Thin and Light Laptop",
+           "manufacturer": "LG",
+           "model": "Gram 14",
+           "rating": 5,
+           "price": 65000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 15,
+           "name": "Home Office PC",
+           "manufacturer": "Acer",
+           "model": "Aspire TC",
+           "rating": 3,
+           "price": 40000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 16,
+           "name": "Gaming Desktop",
+           "manufacturer": "CyberPowerPC",
+           "model": "Gamer Xtreme",
+           "rating": 4,
+           "price": 75000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 17,
+           "name": "Business Desktop",
+           "manufacturer": "Lenovo",
+           "model": "ThinkCentre M90n",
+           "rating": 4,
+           "price": 68000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 18,
+           "name": "Gaming Console",
+           "manufacturer": "Sony",
+           "model": "PlayStation 5",
+           "rating": 5,
+           "price": 60000,
+           "currency": "грн",
+           "topSelling": 1
+       },
+       {
+           "id": 19,
+           "name": "Home Server",
+           "manufacturer": "Synology",
+           "model": "DiskStation DS220+",
+           "rating": 4,
+           "price": 45000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 20,
+           "name": "Mini PC",
+           "manufacturer": "Intel",
+           "model": "NUC 11",
+           "rating": 4,
+           "price": 50000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 21,
+           "name": "Portable Workstation",
+           "manufacturer": "MSI",
+           "model": "WS75",
+           "rating": 5,
+           "price": 92000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 22,
+           "name": "Budget Desktop",
+           "manufacturer": "HP",
+           "model": "Slimline 290",
+           "rating": 3,
+           "price": 38000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 23,
+           "name": "Rugged Laptop",
+           "manufacturer": "Panasonic",
+           "model": "Toughbook 55",
+           "rating": 4,
+           "price": 110000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 24,
+           "name": "Media Center PC",
+           "manufacturer": "ASUS",
+           "model": "ROG GR8 II",
+           "rating": 3,
+           "price": 55000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 25,
+           "name": "Student Desktop",
+           "manufacturer": "Acer",
+           "model": "Aspire TC",
+           "rating": 3,
+           "price": 35000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 26,
+           "name": "Budget Gaming Laptop",
+           "manufacturer": "Acer",
+           "model": "Nitro 5",
+           "rating": 4,
+           "price": 60000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 27,
+           "name": "Gaming Monitor",
+           "manufacturer": "ASUS",
+           "model": "ROG Swift PG279Q",
+           "rating": 5,
+           "price": 40000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 28,
+           "name": "Budget Monitor",
+           "manufacturer": "Acer",
+           "model": "Nitro VG240Y",
+           "rating": 4,
+           "price": 15000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 29,
+           "name": "4K Monitor",
+           "manufacturer": "LG",
+           "model": "27UL850-W",
+           "rating": 5,
+           "price": 60000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 30,
+           "name": "UltraWide Monitor",
+           "manufacturer": "Samsung",
+           "model": "LC49RG90SSUXEN",
+           "rating": 5,
+           "price": 80000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 31,
+           "name": "Gaming Keyboard",
+           "manufacturer": "Razer",
+           "model": "BlackWidow Elite",
+           "rating": 4,
+           "price": 10000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 32,
+           "name": "Mechanical Keyboard",
+           "manufacturer": "Corsair",
+           "model": "K95 RGB Platinum",
+           "rating": 5,
+           "price": 8000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 33,
+           "name": "Gaming Mouse",
+           "manufacturer": "Logitech",
+           "model": "G502 Hero",
+           "rating": 4,
+           "price": 6000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 34,
+           "name": "Wireless Mouse",
+           "manufacturer": "Microsoft",
+           "model": "Surface Mobile Mouse",
+           "rating": 4,
+           "price": 3000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 35,
+           "name": "Gaming Headset",
+           "manufacturer": "HyperX",
+           "model": "Cloud II",
+           "rating": 5,
+           "price": 7000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 36,
+           "name": "Wireless Headphones",
+           "manufacturer": "Sony",
+           "model": "WH-1000XM4",
+           "rating": 5,
+           "price": 15000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 37,
+           "name": "Bluetooth Speaker",
+           "manufacturer": "JBL",
+           "model": "Flip 5",
+           "rating": 4,
+           "price": 4000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 38,
+           "name": "Smart Speaker",
+           "manufacturer": "Amazon",
+           "model": "Echo Dot (4th Gen)",
+           "rating": 4,
+           "price": 3000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 39,
+           "name": "Webcam",
+           "manufacturer": "Logitech",
+           "model": "C920 HD Pro",
+           "rating": 4,
+           "price": 5000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 40,
+           "name": "External Hard Drive",
+           "manufacturer": "Seagate",
+           "model": "Backup Plus Slim",
+           "rating": 5,
+           "price": 4000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 41,
+           "name": "SSD",
+           "manufacturer": "Samsung",
+           "model": "970 EVO Plus",
+           "rating": 5,
+           "price": 8000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 42,
+           "name": "Graphics Card",
+           "manufacturer": "NVIDIA",
+           "model": "GeForce RTX 3080",
+           "rating": 5,
+           "price": 50000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 43,
+           "name": "CPU",
+           "manufacturer": "AMD",
+           "model": "Ryzen 7 5800X",
+           "rating": 5,
+           "price": 30000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 44,
+           "name": "Motherboard",
+           "manufacturer": "ASUS",
+           "model": "ROG Strix X570-E Gaming",
+           "rating": 5,
+           "price": 15000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 45,
+           "name": "RAM",
+           "manufacturer": "Corsair",
+           "model": "Vengeance LPX",
+           "rating": 5,
+           "price": 10000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 46,
+           "name": "Power Supply",
+           "manufacturer": "EVGA",
+           "model": "SuperNOVA 750 G3",
+           "rating": 5,
+           "price": 8000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 47,
+           "name": "Case",
+           "manufacturer": "NZXT",
+           "model": "H510",
+           "rating": 4,
+           "price": 6000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 48,
+           "name": "Cooling System",
+           "manufacturer": "Cooler Master",
+           "model": "Hyper 212 RGB",
+           "rating": 4,
+           "price": 3000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 49,
+           "name": "Monitor Stand",
+           "manufacturer": "VIVO",
+           "model": "Dual LCD Monitor Desk Mount",
+           "rating": 4,
+           "price": 2000,
+           "currency": "грн",
+           "topSelling": 0
+       },
+       {
+           "id": 50,
+           "name": "Gaming Chair",
+           "manufacturer": "DXRacer",
+           "model": "Formula Series",
+           "rating": 5,
+           "price": 15000,
+           "currency": "грн",
+           "topSelling": 0
+       }
+   ]
+}
