@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoriteViewController: UIViewController {
+class FavoriteViewController: UIViewController, FavoriteViewDelegate {
     
     @IBOutlet weak var contentView: FavoriteView!
     var model: FavoriteModel!
@@ -31,7 +31,6 @@ class FavoriteViewController: UIViewController {
         model.delegate = self
         
         contentView.delegate = self
-        
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
     }
@@ -45,10 +44,8 @@ extension FavoriteViewController: FavoriteModelDelegate {
     }
 }
 
-// MARK: - FavoriteViewDelegate
-extension FavoriteViewController: FavoriteViewDelegate {
-    
-}
+
+
 
 // MARK: - UITableViewDataSource
 extension FavoriteViewController: UITableViewDataSource {
@@ -59,21 +56,51 @@ extension FavoriteViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell") as? CustomFavoriteCell
         else {
             assertionFailure()
             return UITableViewCell()
         }
         
         let item = model.favoriteItems[indexPath.row]
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = item.model + ", " + item.manufacturer
-        
+        cell.setup(with: item)
+       
         return cell
     }
 }
-
-// MARK: - UITableViewDelegate
+//
+//// MARK: FavoriteViewController
 extension FavoriteViewController: UITableViewDelegate {
-    
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //            видалення
+            let deletedItem = model.favoriteItems.remove(at: indexPath.row)
+            // оновлення
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            model.saveChangesIfNeeded()
+            tableView.reloadData()
+        }
+    }
 }
+
+
+// MARK: CustomCell
+class CustomFavoriteCell: UITableViewCell {
+    @IBOutlet weak var idL: UILabel!
+    @IBOutlet weak var nameL: UILabel!
+    @IBOutlet weak var modelL: UILabel!
+    
+    weak var delegate: FavoriteViewDelegate?
+    
+    
+    private var itemId: Int = 0
+    
+    func setup(with item: Favorite) {
+        self.itemId = item.id
+        self.idL.text = "\(item.id)"
+        self.nameL.text = item.name
+        self.modelL.text = "\(item.manufacturer) \(item.model)"
+    }
+}
+    

@@ -38,8 +38,9 @@ class FavoriteModel {
         }
         
         let savedItems = localStorage.getFavorites()
-        guard savedItems != favoriteItems else { return }
+        guard savedItems == favoriteItems else { return }
         
         localStorage.saveFavorites(favoriteItems)
     }
 }
+
